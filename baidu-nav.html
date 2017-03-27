@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>仿百度百科导航</title>
+	<style type="text/css">
+	*{
+		margin: 0; padding: 0;
+	}
+	body{
+		background: url('img.png');
+	}
+	#nav{
+		list-style: none;
+	}
+	#nav>li{
+		float: left;
+		height: 30px;
+		line-height: 30px;
+		background: #19A97B;
+		width: 100px;
+		text-align: center;
+		/*padding: 0px 10px;*/
+		border-right:1px solid #333;
+	}
+	#nav>li>a{
+		color: #fff;
+	}
+	#er{
+		background: #fff;
+		border:1px solid #000;
+		list-style: none;
+		width: 70px;
+		text-align: center;
+		padding: 0px 15px;
+		position: absolute;/*使用定位，方便确定二级菜单位置*/
+		left: -1px;
+		top: 30px;
+		display: none;
+	}
+	#jghz{
+		position: relative;
+		/*为二级菜单设定一个相对定位的父级元素*/
+	}
+	#jghz:hover #er{
+		display: block;
+	}
+	#er>li{
+		border-bottom: 1px solid #999;
+	}
+	#er>li>a{
+		color: #333;
+		text-decoration: none;
+	}
+	.cont{
+		width: 500px;
+		height: 3000px;
+		background: rgba(50,50,50,0.8);/*透明度0-1*/
+	}
+	.clear{ clear: both;}
+	</style>
+</head>
+<body>
+<div class="head">
+	<ul id="nav">
+		<li><a href="#">首页</a></li>
+		<li><a href="#">分类</a></li>
+		<li><a href="#">教育文库</a></li>
+		<li><a href="#">精品文库</a></li>
+		<li id="jghz"><a href="#">机构合作</a>
+			<ul id="er">
+				<li><a href="#">机构认证</a></li>
+				<li><a href="#">企业文库</a></li>
+				<li><a href="#">品牌推广</a></li>
+				<li><a href="#">技术服务</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="clear"></div>
+</body>
+</html>
